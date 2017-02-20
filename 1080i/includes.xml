@@ -1683,10 +1683,10 @@
 					<visible>!VideoPlayer.Content(episodes)</visible>
 				</control>
 				<control type="image">
-					<left>98</left>
+					<left>30</left>
 					<top>110</top>
-					<width>180</width>
-					<height>36</height>
+					<width>310</width>
+					<height>30</height>
 					<texture colordiffuse="$VAR[TitleColorVar]">$INFO[VideoPlayer.Rating,player_stars/,.png]</texture>
 				</control>
 			</control>

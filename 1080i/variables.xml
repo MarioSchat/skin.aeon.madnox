@@ -381,8 +381,8 @@
 		<value condition="SubString(ListItem.mpaa,UK:12)">BBFC_12_Certificate_UK</value>
 		<value condition="SubString(ListItem.mpaa,UK:15)">BBFC_15_Certificate_UK</value>
 		<value condition="SubString(ListItem.mpaa,UK:18)">BBFC_18_Certificate_UK</value>
-		<value condition="SubString(ListItem.mpaa,Germany:0) | SubString(ListItem.mpaa,ab 0) | SubString(ListItem.mpaa,o.A) | SubString(ListItem.mpaa,FSK 0) | String.IsEqual(ListItem.mpaa,FSK:0) | String.IsEqual(ListItem.mpaa,Rated 0)">FSK-0</value>
-		<value condition="SubString(ListItem.mpaa,Germany:6) |  SubString(ListItem.mpaa,ab 6) | !SubString(ListItem.mpaa,16) + SubString(ListItem.mpaa,6) | SubString(ListItem.mpaa,FSK 6) | String.IsEqual(ListItem.mpaa,FSK:6)">FSK-6</value>
+		<value condition="SubString(ListItem.mpaa,Germany:0) | SubString(ListItem.mpaa,ab 0) | SubString(ListItem.mpaa,0) | SubString(ListItem.mpaa,FSK 0) | String.IsEqual(ListItem.mpaa,FSK:0)">FSK-0</value>
+		<value condition="SubString(ListItem.mpaa,Germany:6) | SubString(ListItem.mpaa,ab 6) | SubString(ListItem.mpaa,6) | SubString(ListItem.mpaa,FSK 6) | String.IsEqual(ListItem.mpaa,FSK:6)">FSK-6</value>
 		<value condition="SubString(ListItem.mpaa,Germany:12) | SubString(ListItem.mpaa,ab 12) | SubString(ListItem.mpaa,12) | SubString(ListItem.mpaa,FSK 12) | String.IsEqual(ListItem.mpaa,FSK:12)">FSK-12</value>
 		<value condition="SubString(ListItem.mpaa,Germany:16) | SubString(ListItem.mpaa,ab 16) | SubString(ListItem.mpaa,16) | SubString(ListItem.mpaa,FSK 16) | String.IsEqual(ListItem.mpaa,FSK:16)">FSK-16</value>
 		<value condition="SubString(ListItem.mpaa,Germany:18) | SubString(ListItem.mpaa,ab 18) | SubString(ListItem.mpaa,18) | SubString(ListItem.mpaa,FSK 18) | String.IsEqual(ListItem.mpaa,FSK:18)">FSK-18</value>
@@ -428,8 +428,8 @@
 		<value condition="SubString(VideoPlayer.mpaa,UK:12)">BBFC_12_Certificate_UK</value>
 		<value condition="SubString(VideoPlayer.mpaa,UK:15)">BBFC_15_Certificate_UK</value>
 		<value condition="SubString(VideoPlayer.mpaa,UK:18)">BBFC_18_Certificate_UK</value>
-		<value condition="SubString(VideoPlayer.mpaa,Germany:0) | SubString(VideoPlayer.mpaa,o.A) | String.IsEqual(VideoPlayer.mpaa,ab 0) | SubString(VideoPlayer.mpaa,FSK 0) |  SubString(VideoPlayer.mpaa,Rated 0) |SubString(VideoPlayer.mpaa,FSK:0)">FSK-0</value>
-		<value condition="SubString(VideoPlayer.mpaa,Germany:6) | !SubString(VideoPlayer.mpaa,16) + SubString(VideoPlayer.mpaa,6) | String.IsEqual(VideoPlayer.mpaa,ab 6) | SubString(VideoPlayer.mpaa,FSK 6) | SubString(VideoPlayer.mpaa,FSK:6)">FSK-6</value>
+		<value condition="SubString(VideoPlayer.mpaa,Germany:0) | SubString(VideoPlayer.mpaa,0) | String.IsEqual(VideoPlayer.mpaa,ab 0) | SubString(VideoPlayer.mpaa,FSK 0) | SubString(VideoPlayer.mpaa,FSK:0)">FSK-0</value>
+        <value condition="SubString(VideoPlayer.mpaa,Germany:6) | SubString(VideoPlayer.mpaa,6) | String.IsEqual(VideoPlayer.mpaa,ab 6) | SubString(VideoPlayer.mpaa,FSK 6) | SubString(VideoPlayer.mpaa,FSK:6)">FSK-6</value>
 		<value condition="SubString(VideoPlayer.mpaa,Germany:12) | SubString(VideoPlayer.mpaa,12) | String.IsEqual(VideoPlayer.mpaa,ab 12) | SubString(VideoPlayer.mpaa,FSK 12) | SubString(VideoPlayer.mpaa,FSK:12)">FSK-12</value>
 		<value condition="SubString(VideoPlayer.mpaa,Germany:16) | SubString(VideoPlayer.mpaa,16) | String.IsEqual(VideoPlayer.mpaa,ab 16) | SubString(VideoPlayer.mpaa,FSK 16) | SubString(VideoPlayer.mpaa,FSK:16)">FSK-16</value>
 		<value condition="SubString(VideoPlayer.mpaa,Germany:18) | SubString(VideoPlayer.mpaa,18) | String.IsEqual(VideoPlayer.mpaa,ab 18) | SubString(VideoPlayer.mpaa,FSK 18) | SubString(VideoPlayer.mpaa,FSK:18)">FSK-18</value>
