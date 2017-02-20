@@ -36,6 +36,12 @@
 					<texture fallback="common/black.png" background="true">$INFO[Window(home).Property(VideoInfo.ImageFilter)]</texture>
 				</control>
 				<control type="image">
+					<width>1920</width>
+					<height>1080</height>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+				</control>
+				<control type="image">
 					<posx>729</posx>
 					<width>1192</width>
 					<animation effect="fade" start="100" end="75" time="0" condition="true">Conditional</animation>
@@ -341,11 +347,11 @@
 									<visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode)] + !Skin.HasSetting(DisableRatingColorFlag)</visible>
 								</control>
 								<control type="group">
-									<width>155</width>
+									<width>385</width>
 									<visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,tvshow)</visible>
 									<control type="label">
 										<top>-1</top>
-										<width>155</width>
+										<width>385</width>
 										<height>38</height>
 										<align>center</align>
 										<label>$LOCALIZE[368]</label>
@@ -354,10 +360,10 @@
 									</control>
 									<control type="label">
 										<top>29</top>
-										<width>155</width>
+										<width>385</width>
 										<height>38</height>
 										<align>center</align>
-										<label fallback="?">$INFO[ListItem.Rating]</label>
+										<label fallback="?">$INFO[ListItem.RatingAndVotes]</label>
 										<font>Font_Bold34</font>
 										<textcolor>white2</textcolor>
 									</control>
@@ -388,11 +394,11 @@
 									</control>
 								</control>
 								<control type="group">
-									<width>155</width>
+									<width>135</width>
 									<visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode)</visible>
 									<control type="label">
 										<top>-1</top>
-										<width>155</width>
+										<width>135</width>
 										<height>38</height>
 										<align>center</align>
 										<label>$LOCALIZE[2050]</label>
@@ -402,7 +408,7 @@
 									<control type="label">
 										<left>0</left>
 										<top>18</top>
-										<width>155</width>
+										<width>135</width>
 										<height>60</height>
 										<align>center</align>
 										<label>$INFO[ListItem.Duration]</label>
@@ -418,10 +424,10 @@
 								</control>
 								<control type="group">
 									<visible>!String.IsEqual(ListItem.DBType,episode)</visible>
-									<width>155</width>
+									<width>135</width>
 									<control type="label">
 										<top>-1</top>
-										<width>155</width>
+										<width>135</width>
 										<height>38</height>
 										<align>center</align>
 										<label>$LOCALIZE[345]</label>
@@ -430,7 +436,7 @@
 									</control>
 									<control type="label">
 										<top>18</top>
-										<width>155</width>
+										<width>135</width>
 										<height>60</height>
 										<align>center</align>
 										<label fallback="-">$INFO[ListItem.Year]</label>
@@ -451,7 +457,7 @@
 									<left>20</left>
 									<control type="image" id="800011">
 										<top>1</top>
-										<width>150</width>
+										<width>160</width>
 										<height>74</height>
 										<aspectratio aligny="center" align="center">keep</aspectratio>
 										<texture colordiffuse="white2" background="true">$VAR[ColorFlagsStudio]$INFO[ListItem.Studio,,.png]</texture>
@@ -459,7 +465,7 @@
 									</control>
 									<control type="label">
 										<left>15</left>
-										<width>155</width>
+										<width>160</width>
 										<height>74</height>
 										<align>center</align>
 										<label>$INFO[ListItem.Studio]</label>
@@ -662,7 +668,7 @@
 							<control type="grouplist">
 								<left>-10</left>
 								<top>872</top>
-								<width>1045</width>
+								<width>1250</width>
 								<height>90</height>
 								<orientation>horizontal</orientation>
 								<itemgap>25</itemgap>
