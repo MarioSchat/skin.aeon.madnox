@@ -447,7 +447,7 @@
 					<font>Font_Reg22_Caps</font>
 					<textcolor>grey</textcolor>
 					<wrapmultiline>true</wrapmultiline>
-                    <visible>String.IsEmpty(Control.GetLabel(95)) + !Skin.HasSetting(DisableStudiosColorFlag)+ !Container.Content(tvshows) + !Container.Content(seasons)</visible>
+                                        <visible>String.IsEmpty(Control.GetLabel(95)) + !Skin.HasSetting(DisableStudiosColorFlag)+ !Container.Content(tvshows) + !Container.Content(seasons)</visible>
 				</control>
 				<!--control type="image">
 					<top>12</top>
