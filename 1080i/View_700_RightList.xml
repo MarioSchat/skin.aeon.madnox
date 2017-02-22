@@ -428,34 +428,26 @@
 					<include>AudioFlagsVars</include>
 					<include>VisibleFadeEffect</include>
 				</control>
-				<control type="image">
+				<control type="image" id="95">
 					<left>1000</left>
 					<top>-13</top>
 					<colordiffuse>floor</colordiffuse>
 					<include>MediaFlagVars</include>
 					<texture>$VAR[ColorFlagsStudio]$INFO[ListItem.Studio,,.png]</texture>
-					<visible>!String.IsEmpty(ListItem.Studio)	+ !Container.Content(tvshows) + !Container.Content(seasons)</visible>
 					<include>VisibleFadeEffect</include>
-				</control>
-				<control type="image">
-					<left>1000</left>
-					<top>-13</top>
-					<colordiffuse>floor</colordiffuse>
-					<texture>$VAR[ColorFlagsStudio]default-studio.png</texture>
-					<include>AudioFlagsVars</include>
-					<visible>String.IsEmpty(ListItem.Studio)</visible>
+					<visible>!String.IsEmpty(ListItem.Studio) + !Container.Content(tvshows) + !Container.Content(seasons)</visible>
 				</control>
 				<control type="label">
 					<left>1000</left>
-					<top>-13</top>
-					<width>155</width>
+					<top>-5</top>
+					<width>175</width>
 					<height>70</height>
 					<align>center</align>
 					<label>$INFO[ListItem.Studio]</label>
 					<font>Font_Reg22_Caps</font>
 					<textcolor>grey</textcolor>
 					<wrapmultiline>true</wrapmultiline>
-					<visible>String.IsEmpty(ListItem.Studio) + !Skin.HasSetting(DisableStudiosColorFlag)</visible>
+                    <visible>String.IsEmpty(Control.GetLabel(95)) + !Skin.HasSetting(DisableStudiosColorFlag)+ !Container.Content(tvshows) + !Container.Content(seasons)</visible>
 				</control>
 				<!--control type="image">
 					<top>12</top>
