@@ -11,7 +11,7 @@
 	</include>
 	<include name="BreadcrumbsLabel">
 		<left>10</left>
-		<width min="15" max="530">auto</width>
+		<width min="15" max="280">auto</width>
 		<height>38</height>
 		<font>Font_Reg30_Caps</font>
 		<shadowcolor>bcshadow</shadowcolor>
@@ -39,7 +39,7 @@
 		<!--left widget -->
 		<control type="image">
 			<left>-140</left>
-			<width>794</width>
+			<width>840</width>
 			<height>87</height>
 			<texture colordiffuse="$VAR[ExtendedColorVar]" flipy="true" flipx="true">home/timepanel_mid.png</texture>
 			<include>Animation_VisibleChange400</include>
@@ -329,10 +329,10 @@
 					<animation effect="slide" end="-10" time="320" condition="!Skin.HasSetting(W_condition_image)">Conditional</animation>
 				</control>
 				<control type="image">
-					<left>190</left>
-					<top>-15</top>
-					<width>70</width>
-					<height>70</height>
+					<left>220</left>
+					<top>-11</top>
+					<width>63</width>
+					<height>63</height>
 					<texture colordiffuse="white2">$VAR[Realweatherimg]$INFO[Weather.FanartCode].png</texture>
 					<visible>!Skin.HasSetting(W_condition_image)</visible>
 					<visible>!Skin.HasSetting(shorterhomebars) + Skin.HasSetting(breadcrumbsweather)</visible>
