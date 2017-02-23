@@ -428,7 +428,7 @@
 					<include>AudioFlagsVars</include>
 					<include>VisibleFadeEffect</include>
 				</control>
-				<control type="image" id="95">
+				<control type="image" id="999">
 					<left>1000</left>
 					<top>-13</top>
 					<colordiffuse>floor</colordiffuse>
@@ -447,19 +447,8 @@
 					<font>Font_Reg22_Caps</font>
 					<textcolor>grey</textcolor>
 					<wrapmultiline>true</wrapmultiline>
-                                        <visible>String.IsEmpty(Control.GetLabel(95)) + !Skin.HasSetting(DisableStudiosColorFlag)+ !Container.Content(tvshows) + !Container.Content(seasons)</visible>
+                    <visible>String.IsEmpty(Control.GetLabel(999)) + !Skin.HasSetting(DisableStudiosColorFlag)+ !Container.Content(tvshows) + !Container.Content(seasons)</visible>
 				</control>
-				<!--control type="image">
-					<top>12</top>
-					<left>200</left>
-					<width>120</width>
-					<height>68</height>
-					<aspectratio>keep</aspectratio>
-					<texture fallback="flags/mpaa/NR.png">$VAR[RatingFlagVar]</texture>
-					<colordiffuse>floor</colordiffuse>
-					<include>MediaFlagVars</include>
-					<visible>!Container.Content(tvshows) + !Container.Content(seasons) + !String.IsEmpty(ListItem.Title)</visible>
-				</control-->
 				<control type="image">
 					<left>165</left>
 					<width>200</width>

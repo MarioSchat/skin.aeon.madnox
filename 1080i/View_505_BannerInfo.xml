@@ -594,16 +594,17 @@
 						<textcolor>grey2</textcolor>
 					</control>
 				</control>
-				<control type="image" id="75">
+				<control type="image" id="800014">
 					<posx>500</posx>
 					<width>165</width>
 					<colordiffuse>grey2</colordiffuse>
+					<include>MediaFlagVars</include>
 					<bordersize>2</bordersize>
 					<include>MediaFlagVars</include>
-					<texture>$VAR[ColorFlagsStudio]$INFO[ListItem.Studio,,.png]</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
-					<colordiffuse>floor</colordiffuse>
-					<animation effect="fade" time="200">VisibleChange</animation>					
+					<texture>$VAR[StudioImageVar]</texture>
+					<visible>!String.IsEmpty(ListItem.Studio)</visible>
+					<include>VisibleFadeEffect</include>
+					<visible>String.IsEmpty + !ListItem.IsParentFolder</visible>
 				</control>
 				<control type="label">
 					<posx>500</posx>
@@ -613,8 +614,8 @@
 					<font>Font_Reg22_Caps</font>
 					<textcolor>grey</textcolor>
 					<wrapmultiline>true</wrapmultiline>
-                    <visible>String.IsEmpty(Control.GetLabel(75)) + !Skin.HasSetting(DisableStudiosColorFlag)</visible>
-				</control>
+                    <visible>String.IsEmpty(Control.GetLabel(800014)) + !Skin.HasSetting(DisableStudiosColorFlag)</visible>
+                </control>
 			</control>
 			<control type="group">
 				<left>1100</left>
@@ -644,27 +645,26 @@
 					<include>AudioFlagsVars</include>
 					<include>VisibleFadeEffect</include>
 				</control>
-				<control type="image" id="80">
-					<posx>380</posx>
-					<width>165</width>
-					<colordiffuse>grey2</colordiffuse>
-					<bordersize>2</bordersize>
-					<include>MediaFlagVars</include>
-					<texture>$VAR[ColorFlagsStudio]$INFO[ListItem.Studio,,.png]</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+				<control type="image" id="800015">
+					<left>380</left>
+					<top>-10</top>
 					<colordiffuse>floor</colordiffuse>
-					<animation effect="fade" time="200">VisibleChange</animation>					
+					<include>MediaFlagVars</include>
+					<texture>$VAR[StudioImageVar]</texture>
+					<visible>!String.IsEmpty(ListItem.Studio) + !Container.Content(tvshows) + !Container.Content(seasons)</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="label">
-					<posx>370</posx>
-					<top>-15</top>
+					<left>365</left>
+					<top>-10</top>
 					<width>170</width>
+					<height>70</height>
 					<align>center</align>
 					<label>$INFO[ListItem.Studio]</label>
 					<font>Font_Reg22_Caps</font>
 					<textcolor>grey</textcolor>
 					<wrapmultiline>true</wrapmultiline>
-                    <visible>String.IsEmpty(Control.GetLabel(80)) + !Skin.HasSetting(DisableStudiosColorFlag)</visible>		
+                    <visible>String.IsEmpty(Control.GetLabel(800015)) + !Skin.HasSetting(DisableStudiosColorFlag) + !Container.Content(tvshows) + !Container.Content(seasons)</visible>
 				</control>
 				<control type="image">
 					<top>12</top>

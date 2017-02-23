@@ -529,10 +529,8 @@
 				</control>
 				<control type="label">
 					<left>152</left>
-					<top>915</top>
-					<!-- MAD - Shorten title length -->
-					<!--width>1245</width-->
-					<width>1210</width>
+					<top>930</top>
+					<width>900</width>
 					<label>$VAR[FirstLabelVar]</label>
 					<font>Font_ShowcaseMainLabel2_Caps</font>
 					<shadowcolor>floorshadow</shadowcolor>
@@ -542,7 +540,7 @@
 					<visible>!Skin.HasSetting(smallshiftview)</visible>
 				</control>
 			</control>
-			<control type="image">
+			<control type="image" id="800013">
 				<left>1380</left>
 				<top>994</top>
 				<texture>$VAR[ShiftStudioImageVar]</texture>
@@ -553,7 +551,20 @@
 				<colordiffuse>floor</colordiffuse>
 				<visible>Skin.HasSetting(smallshiftview) + Container.Content(tvshows)</visible>
 			</control>
-			<control type="image">
+			<control type="label">
+				<left>1380</left>
+				<top>985</top>
+				<width>170</width>
+				<height>90</height>
+				<align>center</align>
+				<label>$INFO[ListItem.Studio]</label>
+				<font>Font_Reg22_Caps</font>
+				<textcolor>white</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+				<colordiffuse>floor</colordiffuse>
+                <visible>String.IsEmpty(Control.GetLabel(800013)) + Skin.HasSetting(smallshiftview) + Container.Content(tvshows)</visible>
+			</control>				
+			<control type="image" id="800013">
 				<left>1380</left>
 				<top>994</top>
 				<texture>$VAR[ShiftStudioImageVar]</texture>
@@ -564,9 +575,22 @@
 				<colordiffuse>floor</colordiffuse>
 				<visible>!Skin.HasSetting(smallshiftview) + Container.Content(tvshows)</visible>
 			</control>
-			<control type="image">
-				<left>1060</left>
-				<top>994</top>
+				<control type="label">
+				<left>1380</left>
+				<top>985</top>
+				<width>170</width>
+				<height>90</height>
+				<align>center</align>
+				<label>$INFO[ListItem.Studio]</label>
+				<font>Font_Reg22_Caps</font>
+				<textcolor>white</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+				<colordiffuse>floor</colordiffuse>
+                <visible>String.IsEmpty(Control.GetLabel(800013)) + !Skin.HasSetting(smallshiftview) + Container.Content(tvshows)</visible>
+			</control>				
+			<control type="image" id="800014">
+				<left>1070</left>
+				<top>990</top>
 				<texture>$VAR[ShiftStudioImageVar]</texture>
 				<width>135</width>
 				<height>90</height>
@@ -575,9 +599,22 @@
 				<colordiffuse>floor</colordiffuse>
 				<visible>Skin.HasSetting(smallshiftview) + Container.Content(movies)</visible>
 			</control>
-			<control type="image">
+			<control type="label">
 				<left>1060</left>
-				<top>994</top>
+				<top>985</top>
+				<width>170</width>
+				<height>90</height>
+				<align>center</align>
+				<label>$INFO[ListItem.Studio]</label>
+				<font>Font_Reg22_Caps</font>
+				<textcolor>white</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+				<colordiffuse>floor</colordiffuse>
+                <visible>String.IsEmpty(Control.GetLabel(800014)) + Skin.HasSetting(smallshiftview) + Container.Content(movies)</visible>
+			</control>	
+			<control type="image" id="800015">
+				<left>1070</left>
+				<top>990</top>
 				<texture>$VAR[ShiftStudioImageVar]</texture>
 				<width>135</width>
 				<height>90</height>
@@ -586,6 +623,19 @@
 				<colordiffuse>floor</colordiffuse>
 				<visible>!Skin.HasSetting(smallshiftview) + Container.Content(movies)</visible>
 			</control>
+			<control type="label">
+				<left>1060</left>
+				<top>985</top>
+				<width>170</width>
+				<height>90</height>
+				<align>center</align>
+				<label>$INFO[ListItem.Studio]</label>
+				<font>Font_Reg22_Caps</font>
+				<textcolor>grey</textcolor>
+				<colordiffuse>floor</colordiffuse>
+				<wrapmultiline>true</wrapmultiline>
+                <visible>String.IsEmpty(Control.GetLabel(800015)) + !Skin.HasSetting(smallshiftview) + Container.Content(movies)</visible>
+			</control>	
 		</control>
 	</include>
 </includes>
