@@ -22,12 +22,11 @@
 					<control type="image">
 						<texture background="true" fallback="special://skin/backgrounds/fallback_movies.jpg">$INFO[ListItem.Art(fanart)]</texture>
 						<include>FullscreenDimensions</include>
-						<visible>!Skin.HasSetting(bigfanextrafanart) + !ListItem.IsCollection</visible>
 					</control>
 					<control type="image">
 						<texture background="true" fallback="special://skin/backgrounds/fallback_movies.jpg">$INFO[ListItem.Art(extrafanart1)]</texture>
 						<include>FullscreenDimensions</include>
-						<visible>!Skin.HasSetting(bigfanextrafanart) + ListItem.IsCollection</visible>
+						<visible>Skin.HasSetting(bigfanextrafanart) + ListItem.IsCollection</visible>
 					</control>
 					<control type="image">
 						<texture background="true">$INFO[ListItem.Label,special://skin/extras/genre/video/fanart/,.jpg]</texture>
@@ -41,18 +40,13 @@
 					<control type="image">
 						<texture background="true" fallback="special://skin/backgrounds/fallback_movies.jpg">$INFO[ListItem.Art(fanart)]</texture>
 						<include>FullscreenDimensions</include>
-						<visible>!Skin.HasSetting(bigfanextrafanart) + !ListItem.IsCollection</visible>
 					</control>
 					<control type="image">
 						<texture background="true" fallback="special://skin/backgrounds/fallback_movies.jpg">$INFO[ListItem.Art(extrafanart1)]</texture>
 						<include>FullscreenDimensions</include>
-						<visible>!Skin.HasSetting(bigfanextrafanart) + ListItem.IsCollection</visible>
+						<visible>Skin.HasSetting(bigfanextrafanart) + ListItem.IsCollection</visible>
 					</control>
-					<control type="image">
-						<texture background="true" fallback="special://skin/backgrounds/fallback_movies.jpg">$INFO[ListItem.Art(extrafanart1)]</texture>
-						<include>FullscreenDimensions</include>
-						<visible>!Skin.HasSetting(bigfanextrafanart) + ListItem.IsCollection</visible>
-					</control>
+
 					<control type="image">
 						<texture background="true">$INFO[ListItem.Label,special://skin/extras/genre/video/fanart/,.jpg]</texture>
 						<include>FullscreenDimensions</include>
