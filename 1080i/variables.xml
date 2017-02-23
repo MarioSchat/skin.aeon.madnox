@@ -183,7 +183,7 @@
 		<value condition="[ListItem.IsStereoscopic | SubString(ListItem.Filename,3D) | SubString(ListItem.Filename,3d) | SubString(ListItem.Filename,3dbd) | SubString(ListItem.Filename,3DBD)]">bluray3d</value>
 		<value condition="[SubString(ListItem.Filename,bluray) | SubString(ListItem.Filename,blu-ray) | SubString(ListItem.Filename,bdrip) | SubString(ListItem.Filename,brrip)]">bluray</value>
 		<value condition="SubString(ListItem.Filename,dvb)">dvb</value>
-		<value condition="SubString(ListItem.Filename,web-dl)">web-dl</value>
+		<value condition="[SubString(ListItem.Filename,web-dl) | ListItem.Filename,webdl) | SubString(ListItem.Filename,.webdl)]">web-dl</value>		
 		<value condition="SubString(ListItem.Filename,dvd) | String.IsEqual(ListItem.FileExtension,iso) | String.IsEqual(ListItem.FileExtension,ifo)">dvd</value>
 		<value>$INFO[ListItem.VideoCodec]</value>
 	</variable>
@@ -194,7 +194,7 @@
 		<value condition="[ListItem.IsStereoscopic | SubString(ListItem.Filename,3D) | SubString(ListItem.Filename,3d) | SubString(ListItem.Filename,3dbd) | SubString(ListItem.Filename,3DBD)]">bluray3d</value>
 		<value condition="[SubString(Player.Filenameandpath,bluray) | SubString(Player.Filenameandpath,blu-ray) | SubString(Player.Filenameandpath,bdrip) | SubString(Player.Filenameandpath,brrip)]">bluray</value>
 		<value condition="SubString(Player.Filenameandpath,dvb)">dvb</value>
-		<value condition="SubString(Player.Filenameandpath,web-dl)">web-dl</value>
+		<value condition="[SubString(Player.Filenameandpath,web-dl) | SubString(Player.Filenameandpath,webdl) | SubString(Player.Filenameandpath,.webdl)]">web-dl</value>
 		<value condition="SubString(Player.Filenameandpath,dvd) | SubString(Player.Filenameandpath,.iso,Right) | SubString(Player.Filenameandpath,.ifo,Right)">dvd</value>
 		<value>$INFO[VideoPlayer.VideoCodec]</value>
 	</variable>
@@ -3011,7 +3011,7 @@
 		<value condition="SubString(Container(5801).Listitem.mpaa,UK:15)">BBFC_15_Certificate_UK</value>
 		<value condition="SubString(Container(5801).Listitem.mpaa,UK:18)">BBFC_18_Certificate_UK</value>
 		<value condition="SubString(Container(5801).Listitem.mpaa,Germany:0) | SubString(Container(5801).Listitem.mpaa,ab 0) | SubString(Container(5801).Listitem.mpaa,o.A) | SubString(Container(5801).Listitem.mpaa,Rated 0) | SubString(Container(5801).Listitem.mpaa,FSK 0)">FSK-0</value>
-		<value condition="SubString(Container(5801).Listitem.mpaa,Germany:6) | SubString(Container(5801).Listitem.mpaa,ab 6) | !SubString(Container(5801).Listitem.mpaa,16) + SubString(Container(5801).Listitem.mpaa,6) | SubString(Container(5801).Listitem.mpaa,FSK 6) | SubString(Container(5801).Listitem.mpaa,FSK:6)">FSK-6</value>
+		<value condition="SubString(Container(5801).Listitem.mpaa,Germany:6) | SubString(Container(5801).Listitem.mpaa,ab 6) | SubString(Container(5801).Listitem.mpaa,6) | SubString(Container(5801).Listitem.mpaa,FSK 6) | SubString(Container(5801).Listitem.mpaa,FSK:6)">FSK-6</value>
 		<value condition="SubString(Container(5801).Listitem.mpaa,Germany:12) |SubString(Container(5801).Listitem.mpaa,ab 12) | SubString(Container(5801).Listitem.mpaa,12) | SubString(Container(5801).Listitem.mpaa,FSK 12) | SubString(Container(5801).Listitem.mpaa,FSK:12)">FSK-12</value>
 		<value condition="SubString(Container(5801).Listitem.mpaa,Germany:16) |SubString(Container(5801).Listitem.mpaa,ab 16) | SubString(Container(5801).Listitem.mpaa,16) | SubString(Container(5801).Listitem.mpaa,FSK 16) | SubString(Container(5801).Listitem.mpaa,FSK:16)">FSK-16</value>
 		<value condition="SubString(Container(5801).Listitem.mpaa,Germany:18) |SubString(Container(5801).Listitem.mpaa,ab 18) | SubString(Container(5801).Listitem.mpaa,18) | SubString(Container(5801).Listitem.mpaa,FSK 18) | SubString(Container(5801).Listitem.mpaa,FSK:18)">FSK-18</value>
