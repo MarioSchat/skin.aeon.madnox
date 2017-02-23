@@ -794,7 +794,7 @@
 					<width>240</width>
 					<height>335</height>
 					<aspectratio>scale</aspectratio>
-					<texture colordiffuse="white2">special://skin/extras/genre/video/iconsBW/DefaultGrayGenre.jpg</texture>
+					<texture colordiffuse="white2">special://skin/extras/genre/video/iconsBW/Action.jpg</texture>
 					<visible>!Skin.HasSetting(genrethumbs)</visible>
 				</control>
 				<control type="image">
@@ -802,7 +802,7 @@
 					<width>240</width>
 					<height>335</height>
 					<aspectratio>scale</aspectratio>
-					<texture colordiffuse="white2">special://skin/extras/genre/video/icons/DefaultColorGenre.jpg</texture>
+					<texture colordiffuse="white2">special://skin/extras/genre/video/icons/Action.jpg</texture>
 					<visible>Skin.HasSetting(genrethumbs)</visible>
 				</control>
 			</control>
