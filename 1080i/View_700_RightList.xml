@@ -447,7 +447,7 @@
 					<font>Font_Reg22_Caps</font>
 					<textcolor>grey</textcolor>
 					<wrapmultiline>true</wrapmultiline>
-                    <visible>String.IsEmpty(Control.GetLabel(999)) + !Skin.HasSetting(DisableStudiosColorFlag)+ !Container.Content(tvshows) + !Container.Content(seasons)</visible>
+                    <visible>String.IsEmpty(Control.GetLabel(999)) + !Skin.HasSetting(DisableStudiosColorFlag) + !Container.Content(tvshows) + !Container.Content(seasons)</visible>
 				</control>
 				<control type="image">
 					<left>165</left>
@@ -483,13 +483,24 @@
 				<control type="group">
 					<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
 					<include>VisibleFadeEffect</include>
-					<control type="image">
+					<control type="image" id="800015">
 						<left>625</left>
 						<colordiffuse>floor</colordiffuse>
 						<include>MediaFlagVars</include>
 						<texture>$VAR[ColorFlagsStudio]$INFO[ListItem.Studio,,.png]</texture>
 						<visible>!String.IsEmpty(ListItem.Title) + !Container.Content(seasons)</visible>
 					</control>
+					<control type="label">
+					    <left>625</left>
+					    <width>170</width>
+					    <height>70</height>
+					    <align>center</align>
+					    <label>$INFO[ListItem.Studio]</label>
+					    <font>Font_Reg22_Caps</font>
+					    <textcolor>grey</textcolor>
+					    <wrapmultiline>true</wrapmultiline>
+                        <visible>String.IsEmpty(Control.GetLabel(800015)) + !Skin.HasSetting(DisableStudiosColorFlag)</visible>
+				    </control>		
 					<control type="image">
 						<left>800</left>
 						<top>12</top>

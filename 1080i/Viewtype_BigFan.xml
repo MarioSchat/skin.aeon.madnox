@@ -20,39 +20,61 @@
 				<visible>Window.IsActive(videos) + [Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(genres) | Container.Content(sets)]</visible>
 				<itemlayout height="1080" width="1920">
 					<control type="image">
-						<texture background="true" fallback="special://skin/backgrounds/fallback_movies.jpg">$INFO[ListItem.Art(fanart)]</texture>
+						<texture>$INFO[ListItem.Art(fanart)]</texture>
 						<include>FullscreenDimensions</include>
+						<include>Animation_VisibleChange400</include>
+						<visible>!Skin.HasSetting(bigfanextrafanart)</visible>
 					</control>
 					<control type="image">
-						<texture background="true" fallback="special://skin/backgrounds/fallback_movies.jpg">$INFO[ListItem.Art(extrafanart1)]</texture>
+						<texture>$INFO[ListItem.Art(extrafanart1)]</texture>
 						<include>FullscreenDimensions</include>
-						<visible>Skin.HasSetting(bigfanextrafanart) + ListItem.IsCollection</visible>
+						<visible>Skin.HasSetting(bigfanextrafanart) + !ListItem.IsCollection</visible>
 					</control>
 					<control type="image">
 						<texture background="true">$INFO[ListItem.Label,special://skin/extras/genre/video/fanart/,.jpg]</texture>
 						<include>FullscreenDimensions</include>
 						<visible>Container.Content(genres)</visible>
 						<include>Animation_VisibleChange400</include>
-						<visible>!Skin.HasSetting(bigfanextrafanart)</visible>
+						<visible>!Skin.HasSetting(bigfanextrafanart) + Skin.HasSetting(genrethumbs)</visible>
 					</control>
+					<control type="image">
+						<texture background="true">$INFO[ListItem.Label,special://skin/extras/genre/video/fanartBW/,.jpg]</texture>
+						<include>FullscreenDimensions</include>
+						<visible>Container.Content(genres)</visible>
+						<include>Animation_VisibleChange400</include>
+						<visible>!Skin.HasSetting(bigfanextrafanart) + !Skin.HasSetting(genrethumbs)</visible>
+					</control>					
 				</itemlayout>
 				<focusedlayout height="1080" width="1920">
 					<control type="image">
-						<texture background="true" fallback="special://skin/backgrounds/fallback_movies.jpg">$INFO[ListItem.Art(fanart)]</texture>
+						<texture>$INFO[ListItem.Art(fanart)]</texture>
 						<include>FullscreenDimensions</include>
+						<include>Animation_VisibleChange400</include>
+				        <visible>!Skin.HasSetting(bigfanextrafanart)</visible>
 					</control>
 					<control type="image">
-						<texture background="true" fallback="special://skin/backgrounds/fallback_movies.jpg">$INFO[ListItem.Art(extrafanart1)]</texture>
+						<texture>$INFO[ListItem.Art(extrafanart1)]</texture>
 						<include>FullscreenDimensions</include>
-						<visible>Skin.HasSetting(bigfanextrafanart) + ListItem.IsCollection</visible>
+						<visible>Skin.HasSetting(bigfanextrafanart) + !ListItem.IsCollection</visible>
 					</control>
-
+				    <control type="image">
+						<texture>$INFO[ListItem.Art(extrafanart1)]</texture>
+						<include>FullscreenDimensions</include>
+						<visible>Skin.HasSetting(bigfanextrafanart) + !ListItem.IsCollection</visible>
+					</control>
 					<control type="image">
 						<texture background="true">$INFO[ListItem.Label,special://skin/extras/genre/video/fanart/,.jpg]</texture>
 						<include>FullscreenDimensions</include>
 						<visible>Container.Content(genres)</visible>
 						<include>Animation_VisibleChange400</include>
-						<visible>!Skin.HasSetting(bigfanextrafanart)</visible>
+						<visible>!Skin.HasSetting(bigfanextrafanart) + Skin.HasSetting(genrethumbs)</visible>
+					</control>
+					<control type="image">
+						<texture background="true">$INFO[ListItem.Label,special://skin/extras/genre/video/fanartBW/,.jpg]</texture>
+						<include>FullscreenDimensions</include>
+						<visible>Container.Content(genres)</visible>
+						<include>Animation_VisibleChange400</include>
+						<visible>!Skin.HasSetting(bigfanextrafanart) + !Skin.HasSetting(genrethumbs)</visible>
 					</control>
 				</focusedlayout>
 			</control>
